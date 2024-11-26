@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Hangman Game</h1>
+        <div id="rules">
+            <h2>Rules:</h2>
+            <p>1. Player 1 provides a word and a hint.</p>
+            <p>2. Player 2 has 6 chances to guess the word.</p>
+            <p>3. Correct guesses reveal the letter in the word.</p>
+            <p>4. Incorrect guesses reduce the remaining chances and build the hangman.</p>
+        </div>
+        <div id="player1">
+            <h2>Player 1</h2>
+            <label for="wordInput">Enter a word:</label>
+            <input type="password" id="wordInput" placeholder="Secret word">
+            <label for="hintInput">Provide a hint:</label>
+            <input type="text" id="hintInput" placeholder="Hint">
+            <button id="startGame">Start Game</button>
+        </div>
+        <div id="player2" class="hidden">
+            <h2>Player 2</h2>
+            <p id="hint"></p>
+            <div id="wordDisplay"></div>
+            <p>Guess a letter:</p>
+            <input type="text" id="guessInput" maxlength="1">
+            <button id="submitGuess">Submit Guess</button>
+            <p id="chances">Chances left: 6</p>
+            <div id="hangman"></div>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
